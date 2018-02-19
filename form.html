@@ -4,57 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Form</title>
 </head>
 <body>
     
-    <nav>
-        <a href="form.html">Form</a>
-    </nav>
-    
-    <ul>
-        <li><a href="#foot">List item 1</a></li>
-        <li>List item 1</li>
-        <li>List item 1</li>
-        <li>
-            <ul>
-                <li>List item level 2</li>
-            </ul>
-        </li>
-    </ul>
-    
-    <ol start="10" reversed type="a">
-        <li>List item 1</li>
-        <li>List item 1</li>
-        <li>List item 1</li>
-    </ol>
-    
-    
-    <table border="1">
-        <tbody>
-            <tr>
-                <th></th>
-                <th>Quarter I</th>
-                <th>Quarter II</th>
-                <th>Quarter III</th>
-                <th rowspan="5">Summary</th>
-            </tr>
-            <tr>
-                <th>Product 1</th><td>1</td><td>2</td><td>3</td>
-            </tr>
-            <tr>
-                <th>Product 1</th><td>4</td><td>5</td><td>6</td>
-            </tr>
-            <tr>
-                <th>Product 1</th><td>7</td><td>8</td><td>9</td>
-            </tr>
-            <tr>
-                <th>Totals</th><td colspan="3">???</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <footer id="foot"></footer>
+    <form method="POST" action="https://formspree.io/YOUR_EMAIL_HERE">
+        <label for="client-name">Name:</label>
+        <input id="client-name" type="text" 
+            placeholder="Your name" name="client-name"
+            required>
+        <br>
+        <label>Email:
+            <input type="email" name="client-email"
+            placeholder="Your email" required>
+        </label>
+        <br>
+        <label>Car plate:
+            <input type="text" name="client-car"
+            placeholder="Car plate number" required
+            pattern="[A-Z]{2}[\d]{4}[A-Z]{2}"
+            title="AA1234BB">
+        </label>
+        <br>
+            <label>Gender:</label>
+            <label>
+                <input type="radio" name="client-gender" value="male">
+                Male
+            </label>
+            <label>
+                <input type="radio" name="client-gender" value="female">
+                Female
+            </label>
+            <label>
+                <input type="radio" name="client-gender" value="other">
+                Other
+            </label>
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
     
 </body>
 </html>
